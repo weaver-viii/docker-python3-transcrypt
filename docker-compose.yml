@@ -1,0 +1,10 @@
+version: '2'
+services:
+  pytransweb:
+    build: .
+    ports:
+     - "5000:5000"
+    volumes:
+     - ./app:/usr/src/app
+    #restart: always
+    command: transcrypt -n some.py
